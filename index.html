@@ -22,6 +22,11 @@
             width: 100%;
             max-width: 400px;
         }
+        .bar-chart-container {
+             position: relative;
+            height: 350px;
+            width: 100%;
+        }
         @media (min-width: 768px) {
             .chart-container {
                 height: 350px;
@@ -68,10 +73,61 @@
         <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <div class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-2xl font-bold text-[#4D96FF] mb-4 text-center">Our Business Model</h2>
-                <p class="text-center text-gray-700 max-w-3xl mx-auto">
-                    Our strategy is simple yet powerful. We acquire projects through highly optimized gigs on our personal Fiverr accounts. The technical work is then delegated to a vetted network of talented engineering students from BUET, ensuring high-quality delivery while we manage client relations and growth.
-                </p>
+                <h2 class="text-2xl font-bold text-[#4D96FF] mb-6 text-center">Roles & Responsibilities</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-800">Sarik</h3>
+                        <p class="font-semibold text-[#4D96FF] mb-4">Primary Focus</p>
+                        <div class="space-y-3 text-left">
+                            <div class="bg-gray-50 p-3 rounded-lg flex items-start">
+                                <span class="text-2xl mr-4 pt-1">💬</span>
+                                <div>
+                                    <h4 class="font-semibold">Client Communication</h4>
+                                    <p class="text-sm text-gray-600">Lead client inquiries, requirement gathering, and maintain communication throughout the project lifecycle.</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg flex items-start">
+                                <span class="text-2xl mr-4 pt-1">🔍</span>
+                                <div>
+                                    <h4 class="font-semibold">Market Research</h4>
+                                    <p class="text-sm text-gray-600">Actively research new gig ideas, market trends, and service categories to guide our expansion.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-800">Nibir</h3>
+                        <p class="font-semibold text-[#4D96FF] mb-4">Primary Focus</p>
+                         <div class="space-y-3 text-left">
+                            <div class="bg-gray-50 p-3 rounded-lg flex items-start">
+                                <span class="text-2xl mr-4 pt-1">👥</span>
+                                <div>
+                                    <h4 class="font-semibold">Talent Management</h4>
+                                    <p class="text-sm text-gray-600">Recruit, vet, and manage the network of BUET freelancers, ensuring we have the best talent available.</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg flex items-start">
+                                <span class="text-2xl mr-4 pt-1">💰</span>
+                                <div>
+                                    <h4 class="font-semibold">Financial Oversight</h4>
+                                    <p class="text-sm text-gray-600">Manage all financial records, including revenues, expenses, and timely payouts to freelancers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 border-t pt-6 text-center bg-gray-50 rounded-b-lg">
+                     <h3 class="text-xl font-bold text-gray-800 mb-2">Our Shared Responsibilities</h3>
+                     <p class="text-gray-600 max-w-2xl mx-auto">To ensure success, we collaborate on **Client Acquisition**, **Strategic Planning** in our weekly meetings, and perform rigorous **Quality Assurance** on every project before delivery.</p>
+                </div>
+            </div>
+
+             <div class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#4D96FF] mb-4 text-center">Operational Cadence: Our Tasks</h2>
+                 <p class="text-center text-gray-700 mb-6 max-w-3xl mx-auto">Success on Fiverr requires consistent effort. This is our mandatory schedule for managing and optimizing our gigs to maximize visibility and orders.</p>
+                <div class="bar-chart-container">
+                    <canvas id="tasksChart"></canvas>
+                </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
@@ -84,53 +140,49 @@
 
             <div class="bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-2xl font-bold text-[#4D96FF] mb-4 text-center">Core Services & Expertise</h2>
-                <p class="text-center text-gray-700 mb-6">We specialize in high-demand technical solutions centered around the Google Workspace ecosystem, providing significant value to businesses.</p>
+                <p class="text-center text-gray-700 mb-6">We specialize in high-demand technical solutions centered around the Google Workspace ecosystem.</p>
                 <div class="space-y-4">
-                    <div class="bg-blue-50 p-4 rounded-lg flex items-center">
-                        <span class="text-2xl mr-4">📊</span>
-                        <p class="font-semibold text-gray-800">Google Sheets & Apps Script Automation</p>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <p class="font-semibold text-gray-800">📊 Google Sheets & Apps Script Automation</p>
+                        <p class="text-sm text-gray-600 mt-1">Creating custom functions and automating repetitive tasks.</p>
                     </div>
-                    <div class="bg-blue-50 p-4 rounded-lg flex items-center">
-                        <span class="text-2xl mr-4">🔗</span>
-                        <p class="font-semibold text-gray-800">Third-Party API Integration</p>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <p class="font-semibold text-gray-800">🔗 Third-Party API Integration</p>
+                        <p class="text-sm text-gray-600 mt-1">Connecting Google Workspace with other platforms and services.</p>
                     </div>
-                    <div class="bg-blue-50 p-4 rounded-lg flex items-center">
-                        <span class="text-2xl mr-4">🐍</span>
-                        <p class="font-semibold text-gray-800">Python for Google Workspace</p>
-                    </div>
-                     <div class="bg-blue-50 p-4 rounded-lg flex items-center">
-                        <span class="text-2xl mr-4">📈</span>
-                        <p class="font-semibold text-gray-800">Gig Optimization & Market Research</p>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <p class="font-semibold text-gray-800">🐍 Python for Google Workspace</p>
+                         <p class="text-sm text-gray-600 mt-1">Leveraging Python for advanced data manipulation and automation.</p>
                     </div>
                 </div>
             </div>
 
             <div class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-2xl font-bold text-[#4D96FF] mb-6 text-center">How We Work: Project Flow</h2>
+                <h2 class="text-2xl font-bold text-[#4D96FF] mb-6 text-center">How We Work: Detailed Project Flow</h2>
                 <div class="flex flex-col items-center text-center">
                     <div class="flow-card bg-gray-50 p-4 rounded-lg shadow-sm w-full max-w-md">
                         <h3 class="font-bold text-lg">Step 1: Order Confirmation</h3>
-                        <p class="text-gray-600">A client places an order on Fiverr. Partners are notified.</p>
+                        <p class="text-gray-600">A client places an order. The partner who received it immediately notifies the other and clarifies all project requirements with the client.</p>
                     </div>
                     <div class="flow-arrow"></div>
                     <div class="flow-card bg-gray-50 p-4 rounded-lg shadow-sm w-full max-w-md">
-                        <h3 class="font-bold text-lg">Step 2: Delegation</h3>
-                        <p class="text-gray-600">Project requirements are passed to Nibir for talent assignment.</p>
+                        <h3 class="font-bold text-lg">Step 2: Delegation & Handoff</h3>
+                        <p class="text-gray-600">Nibir communicates the project opportunity to the talent pool, including the full scope, deadline, and payout, then selects the best freelancer.</p>
                     </div>
                     <div class="flow-arrow"></div>
                     <div class="flow-card bg-gray-50 p-4 rounded-lg shadow-sm w-full max-w-md">
                         <h3 class="font-bold text-lg">Step 3: Project Execution</h3>
-                        <p class="text-gray-600">A vetted BUET freelancer works on the project.</p>
+                        <p class="text-gray-600">The assigned freelancer works on the project. Nibir acts as the project manager, monitoring progress and providing support.</p>
                     </div>
                     <div class="flow-arrow"></div>
                     <div class="flow-card bg-gray-50 p-4 rounded-lg shadow-sm w-full max-w-md">
-                        <h3 class="font-bold text-lg">Step 4: Quality Assurance</h3>
-                        <p class="text-gray-600">Both partners conduct a thorough review to ensure perfection.</p>
+                        <h3 class="font-bold text-lg">Step 4: Internal Quality Assurance</h3>
+                        <p class="text-gray-600">The completed work is submitted for a mandatory review by both Sarik and Nibir. An iterative feedback cycle ensures the work is flawless.</p>
                     </div>
                     <div class="flow-arrow"></div>
                     <div class="flow-card bg-gray-50 p-4 rounded-lg shadow-sm w-full max-w-md">
-                        <h3 class="font-bold text-lg">Step 5: Delivery & Payout</h3>
-                        <p class="text-gray-600">Final work is delivered to the client and the freelancer is paid promptly.</p>
+                        <h3 class="font-bold text-lg">Step 5: Delivery & Financial Reconciliation</h3>
+                        <p class="text-gray-600">The finalized project is delivered to the client. Once payment clears, Nibir updates the financial ledger and pays the freelancer within 3 business days.</p>
                     </div>
                 </div>
             </div>
@@ -138,7 +190,7 @@
             <div class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-2xl font-bold text-[#4D96FF] mb-6 text-center">Our Roadmap to Growth</h2>
                 <p class="text-center text-gray-700 max-w-3xl mx-auto mb-8">
-                    We have a clear, milestone-based plan for scaling our operations from a partnership into a fully-fledged technology company. Our growth is tied to sustainable performance, not just cumulative earnings.
+                    We have a clear, milestone-based plan for scaling our operations from a partnership into a fully-fledged technology company. Our growth is tied to sustainable performance.
                 </p>
                 <div class="relative">
                     <div class="milestone-line hidden sm:block"></div>
@@ -257,6 +309,71 @@
                 cutout: '60%'
             }
         });
+        
+        const tasksCtx = document.getElementById('tasksChart').getContext('2d');
+        const taskLabels = [
+            wrapLabel('Tweak Gig Content & SEO'), 
+            wrapLabel('Update Gig Photos/Videos'), 
+            wrapLabel('Explore New Gig Ideas'),
+            wrapLabel('Monthly Strategic Review')
+        ];
+        new Chart(tasksCtx, {
+            type: 'bar',
+            data: {
+                labels: taskLabels,
+                datasets: [{
+                    label: 'Task Frequency (Days)',
+                    data: [2, 7, 7, 30],
+                    backgroundColor: [
+                        'rgba(77, 150, 255, 0.7)',
+                        'rgba(255, 209, 102, 0.7)',
+                        'rgba(255, 107, 107, 0.7)',
+                        'rgba(108, 217, 126, 0.7)'
+                    ],
+                    borderColor: [
+                        '#4D96FF',
+                        '#FFD166',
+                        '#FF6B6B',
+                        '#6CD97E'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Frequency (Lower is more frequent)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                             label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.x !== null) {
+                                    label += `Every ${context.parsed.x} days`;
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
     </script>
 </body>
 </html>
